@@ -1,0 +1,33 @@
+
+SELECT COUNT (*) AS num
+FROM provincies
+WHERE provincies.nom  LIKE '%ñ%' or provincies.nom  LIKE '%ny%'
+
+UNION
+
+SELECT COUNT (*) AS num
+FROM poblacions
+WHERE poblacions.nom  LIKE '%ñ%' or poblacions.nom  LIKE '%ny%'
+
+UNION
+
+SELECT COUNT (*) AS num
+FROM clients
+WHERE clients.nom  LIKE '%ñ%' or clients.nom  LIKE '%ny%' and clients.cognoms  LIKE '%ñ%' or clients.cognoms  LIKE '%ny%'
+
+UNION
+
+SELECT COUNT (*) AS num
+FROM productes
+WHERE productes.nom  LIKE '%ñ%' or productes.nom  LIKE '%ny%' 
+
+UNION
+
+SELECT COUNT (*) AS num
+FROM categories
+WHERE categories.nom  LIKE '%ñ%' or categories.nom  LIKE '%ny%' 
+
+
+
+
+
